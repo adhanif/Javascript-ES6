@@ -123,6 +123,6 @@ let C = new Set(c)
 
 console.log(C)
 
-//Map
+//Map  dsdg
 
 letmyMap=new Map();
