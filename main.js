@@ -104,25 +104,131 @@ greet('dani')
 
 //Set, Map, WeakSet and WeakMap
 
+//Set
+/*
 let myArray=[11,22,33,44,55,66];
 let mySet=new Set(myArray);
 mySet.add('100');
-mySet.delete(66)
-// console.log(mySet)
+mySet.add(22)
+mySet.delete('100')
 mySet.forEach(function(val){
     console.log(val)
-});
+}) */
 
-let a = [1, 2, 3, 4, 5]
-let b = [3, 4, 5, 6]
-let c = [...a, ...b]
+// const myMap= new Map();
+// myMap.set('dani', '420');
+// myMap.set('fani', '720');
+// console.log(myMap.get('fani'))
 
-let A = new Set(a)
-let B = new Set(b)
-let C = new Set(c)
+//Exercise#1
+// *Write a function that takes an array of numbers and 
+//returns a new array containing only unique numbers.
 
-console.log(C)
+/*
+const al=[1,2,2,3,3,4,6,5,6,5,6]
+function neue(ar){
+    const set=new Set(ar)
+    const newArray=[]
+    for (const element of set){
+        newArray.push(element)
+    }
+    return newArray;
+}
+console.log(neue(al))
+//using Array.from method
+function uniqueValues(a){
+    const newset=new Set(a)
+    const ArrayNew=Array.from(newset)
+    return ArrayNew
+}
 
-//Map  dsdg
+console.log(uniqueValues(al))*/
 
-letmyMap=new Map();
+
+//Exercise 2: Write a function that takes two arrays of numbers and 
+//returns a new array containing only numbers that appear in both arrays.
+
+/*
+function uniTwoArrays(ar1, ar2){
+    const set1=new Set(ar1)
+    const set2=new Set(ar2)
+    return Array.from(set1).filter(x=> set2.has(x))
+arr1=[1,2,3,4,5,6,7,8,9]
+arr2=[2,3,5,7,9,11,13]
+console.log(uniTwoArrays(arr1, arr2))*/
+
+
+//Exercise 3: Write a function that takes a string and 
+//returns an array of unique characters in the string.
+
+/*
+function uniChar(str){
+    const newStr=new Set(str)
+     return Array.from(newStr)
+}
+
+const b='addbsdbhshshsh'
+console.log(uniChar(b))*/
+
+//Map Excercises
+
+// Exercise 1
+// Create a function called doubleArray that takes an array of numbers as 
+// an argument and returns a new array with each element doubled.
+
+/*
+function doubleArray(arr){
+    return arr.map(x=>x*2)
+}
+m=[1,2,3,4,5,6]
+console.log(doubleArray(m))*/
+
+
+// Exercise 3
+// Create a function called convertToFahrenheit that takes an array of 
+// temperatures in Celsius and returns a new array with each temperature 
+// converted to Fahrenheit. 
+// The formula to convert Celsius to Fahrenheit is 'F = C * 1.8 + 32'.
+
+/*
+function convertToFahrenheit(c){
+  return c.map(
+        function(x){
+            const F=(x*1.8)+32
+            return F
+        }
+    )
+}
+const b=[0, 20, 40]
+console.log(convertToFahrenheit(b))*/
+
+// Arrow function
+
+/*
+let add=function (a, b){
+    let sum=a+b
+    return sum
+}
+console.log(add(10,20))
+
+let add=(a,b)=>a+b;
+console.log(add(20,20))*/
+
+// Exercise1 (Arrow function)
+// Write an arrow function that takes in an array of numbers 
+// and returns the largest number in the array.
+
+/*
+let arrow=(a)=>{
+    let b=0;
+    for(let i=0; i<a.length; i++){
+        // console.log(a[i])
+        if(b<a[i]){
+            b=a[i] 
+        }
+    }
+    return b
+}
+ara=[2,4,8,9,4,7,3,99]
+console.log(arrow(ara))*/
+
